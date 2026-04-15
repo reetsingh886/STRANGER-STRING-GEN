@@ -34,6 +34,7 @@ async def start(bot: Client, msg: Message):
         photo=START_IMG,
         caption=START_TXT,
         reply_markup=InlineKeyboardMarkup(START_BTN),
+        has_spoiler=True  # 👈 spoiler image
     )
 
 
@@ -97,4 +98,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 text=START_TXT,
                 reply_markup=InlineKeyboardMarkup(START_BTN)
-            )
+        )
